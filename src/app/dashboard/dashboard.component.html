@@ -1,1 +1,45 @@
-<p>dashboard works!</p>
+<mat-toolbar>
+  <button mat-flat-button [matMenuTriggerFor]="menu">Menu</button>
+  <span class="example-spacer"></span>    
+    <button (click)="salir()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="colaborador">Colaborador</button>
+    <button mat-menu-item [matMenuTriggerFor]="venta">Venta</button>
+  </mat-menu>
+  
+  <mat-menu #colaborador="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="rol">Rol</button>
+    <button mat-menu-item [matMenuTriggerFor]="tipodoccolab">Tipo de Documento de Colaboradores</button>
+    <button mat-menu-item (click)="irColaborador()">Mantenimiento</button>
+  </mat-menu>
+  
+  <mat-menu #venta="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="estadoventa">Estado de Ventas</button>
+    <button mat-menu-item [matMenuTriggerFor]="metododepago">Métodos de Pago</button>
+    <button mat-menu-item (click)="irVenta()">Mantenimiento</button>
+  </mat-menu>
+  
+  <mat-menu #estadoventa="matMenu">
+    <button mat-menu-item (click)="irEstadoventa()">Mantenimiento de Estados de Venta</button>
+  </mat-menu>
+    <mat-menu #rol="matMenu">
+      <button mat-menu-item (click)="irRol()">Mantenimiento de Roles</button>
+    </mat-menu>
+  
+    <mat-menu #metododepago="matMenu">
+      <button mat-menu-item (click)="irMetododepago()">Mantenimiento de Métodos de Pago</button>
+    </mat-menu>
+  
+    <mat-menu #tipodoccolab="matMenu">
+      <button mat-menu-item (click)="irTipoDocumentoColaborador()">Mantenimiento de Documento</button>
+    </mat-menu>
+</mat-toolbar>
+
+
+
+<hr />
+
+
+  <router-outlet></router-outlet>

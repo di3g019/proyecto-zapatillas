@@ -10,6 +10,7 @@ import { TipodocumentocolaboradorListarComponent } from './dashboard/tipodocumen
 import { VentaListarComponent } from './dashboard/venta/venta-listar/venta-listar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { authGuard } from './auth.guard';
+import { ColaboradorDetalleComponent } from './dashboard/colaborador/colaborador-detalle/colaborador-detalle.component';
 
 export const routes: Routes = [
     {path: "login", component: LoginComponent},
@@ -18,6 +19,7 @@ export const routes: Routes = [
     children: [
         {path: "home", component: HomeComponent},
         {path: "colaborador", component: ColaboradorListarComponent},
+        {path: "colaborador/:id", component:ColaboradorDetalleComponent},
         {path: "estadoventa", component: EstadoventaListarComponent},
         {path: "metododepago", component: MetododepagoListarComponent},
         {path: "rol", component: RolListarComponent},

@@ -11,6 +11,7 @@ import { VentaListarComponent } from './dashboard/venta/venta-listar/venta-lista
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { authGuard } from './auth.guard';
 import { ColaboradorDetalleComponent } from './dashboard/colaborador/colaborador-detalle/colaborador-detalle.component';
+import { EstadoventaDetalleComponent } from './dashboard/estadoventa/estadoventa-detalle/estadoventa-detalle.component';
 
 export const routes: Routes = [
     {path: "login", component: LoginComponent},
@@ -21,6 +22,7 @@ export const routes: Routes = [
         {path: "colaborador", component: ColaboradorListarComponent},
         {path: "colaborador/:id", component:ColaboradorDetalleComponent},
         {path: "estadoventa", component: EstadoventaListarComponent},
+        {path: "estadoventa/:id", component: EstadoventaDetalleComponent},
         {path: "metododepago", component: MetododepagoListarComponent},
         {path: "rol", component: RolListarComponent},
         {path: "tipodocumentocolaborador", component: TipodocumentocolaboradorListarComponent},

@@ -32,9 +32,8 @@ export class ColaboradorListarComponent {
 
   }
   ngOnInit(): void{
-    this.colaboradorService.getAllColaborador().subscribe((data) => {
-      this.colaboradores = data
-    })
+    this.colaboradorService.getAllColaborador()
+    .subscribe((data) => {this.colaboradores = data})
   }
 
   irDetalleColaborador(id: string){

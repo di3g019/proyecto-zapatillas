@@ -1,1 +1,26 @@
-<p>venta-detalle works!</p>
+<div class="module-header">
+    <div class="left">
+        <h3>{{formTitulo}}</h3>
+    </div>
+    <div class="right">
+        <button mat-raised-button color="primary">
+            Guardar
+        </button>        
+    </div>
+</div>
+<hr />
+<div class="form-container">
+    <form class="form" [formGroup]="ventaForm">
+
+        <mat-form-field style="width: 400px;">
+            <mat-label>Fecha:</mat-label>
+            <input matInput type="text" name="fecha" 
+            formControlName="fecha">
+        </mat-form-field>
+        <mat-form-field style="width: 400px;">
+            <mat-label>Descuento:</mat-label>
+            <input matInput type="text" name="descuento" 
+            formControlName="descuento">
+        </mat-form-field>
+    </form>
+</div>

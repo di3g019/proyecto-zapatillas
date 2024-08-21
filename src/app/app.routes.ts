@@ -12,6 +12,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { authGuard } from './auth.guard';
 import { ColaboradorDetalleComponent } from './dashboard/colaborador/colaborador-detalle/colaborador-detalle.component';
 import { EstadoventaDetalleComponent } from './dashboard/estadoventa/estadoventa-detalle/estadoventa-detalle.component';
+import { MetododepagoDetalleComponent } from './dashboard/metododepago/metododepago-detalle/metododepago-detalle.component';
+import { RolDetalleComponent } from './dashboard/rol/rol-detalle/rol-detalle.component';
+import { TipodocumentocolaboradorDetalleComponent } from './dashboard/tipodocumentocolaborador/tipodocumentocolaborador-detalle/tipodocumentocolaborador-detalle.component';
+import { VentaDetalleComponent } from './dashboard/venta/venta-detalle/venta-detalle.component';
 
 export const routes: Routes = [
     {path: "login", component: LoginComponent},
@@ -24,9 +28,13 @@ export const routes: Routes = [
         {path: "estadoventa", component: EstadoventaListarComponent},
         {path: "estadoventa/:id", component: EstadoventaDetalleComponent},
         {path: "metododepago", component: MetododepagoListarComponent},
+        {path: "metododepago/:id", component: MetododepagoDetalleComponent},
         {path: "rol", component: RolListarComponent},
+        {path: "rol/:id", component: RolDetalleComponent},
         {path: "tipodocumentocolaborador", component: TipodocumentocolaboradorListarComponent},
-        {path: "venta", component: VentaListarComponent}
+        {path: "tipodocumentocolaborador/:id",component: TipodocumentocolaboradorDetalleComponent},
+        {path: "venta", component: VentaListarComponent},
+        {path: "venta/:id",component: VentaDetalleComponent}
     ]},
     {path: "",redirectTo: "login", pathMatch: "full"},
     {path: "**", component: PageNotFoundComponent}

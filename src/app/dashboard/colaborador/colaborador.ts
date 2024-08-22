@@ -2,7 +2,7 @@ export interface TipoDocumentoColaborador {
     iddocumento: number;
     nombredocumento: string;
   }
-  
+
 export interface Colaborador {
     idcolaborador: number;
     username: string;

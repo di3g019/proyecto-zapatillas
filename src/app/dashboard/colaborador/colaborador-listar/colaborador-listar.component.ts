@@ -14,16 +14,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ColaboradorListarComponent {
   displayedColumns: string[] = [
-  'idcolaborador', 
-  'username', 
-  'password', 
+  'idcolaborador',
+  'username',
+  'password',
   'nombres',
   'apellidos',
   'correo',
   'fechaingreso',
   'activo',
   'tipoDocumentoColaborador'];
-  
+
   colaboradores: Colaborador[] = []
 
   constructor(private colaboradorService: ColaboradorService,
@@ -39,7 +39,7 @@ export class ColaboradorListarComponent {
   irDetalleColaborador(id: string){
     this.router.navigate([id], {relativeTo: this.route})
   }
-  
+
   irCrearColaborador(){
     this.router.navigate(["nuevo"], {relativeTo: this.route})
   }

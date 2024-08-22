@@ -20,6 +20,9 @@ import { ProductoListarComponent } from './dashboard/producto/producto-listar/pr
 import { ProductoDetalleComponent } from './dashboard/producto/producto-detalle/producto-detalle.component';
 import { DespachoListarComponent } from './dashboard/despacho/despacho-listar/despacho-listar.component';
 import { DespachoDetalleComponent } from './dashboard/despacho/despacho-detalle/despacho-detalle.component';
+import { ClienteListarComponent } from './dashboard/cliente/cliente-listar/cliente-listar.component';
+import { ClienteDetalleComponent } from './dashboard/cliente/cliente-detalle/cliente-detalle.component';
+
 
 export const routes: Routes = [
     {path: "login", component: LoginComponent},
@@ -42,7 +45,9 @@ export const routes: Routes = [
         {path: "producto", component: ProductoListarComponent},
         {path: "producto/:id", component: ProductoDetalleComponent},
         {path: "despacho",component:DespachoListarComponent},
-        {path: "despacho/:id", component: DespachoDetalleComponent}
+        {path: "despacho/:id", component: DespachoDetalleComponent},
+        {path: "cliente",component: ClienteListarComponent},
+        {path: "cliente/id", component: ClienteDetalleComponent}
     ]},
     {path: "",redirectTo: "login", pathMatch: "full"},
     {path: "**", component: PageNotFoundComponent}

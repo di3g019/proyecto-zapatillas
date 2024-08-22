@@ -1,11 +1,11 @@
 <button mat-raised-button color="primary"
-(click)="irCrearColaborador()">Nuevo Colaborador</button>
+(click)="irCrearCliente()">Nuevo Cliente</button>
 
-<table mat-table [dataSource]="colaboradores" class="mat-elevation-z8">
+<table mat-table [dataSource]="clientes" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="idcolaborador">
+    <ng-container matColumnDef="idcliente">
       <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.idcolaborador}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.idcliente}} </td>
     </ng-container>
 
     <!-- Name Column -->
@@ -22,22 +22,22 @@
 
     <ng-container matColumnDef="nombres">
       <th mat-header-cell *matHeaderCellDef> Nombres </th>
-      <td mat-cell *matCellDef="let element"> {{element.nombres}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.nombrecliente}} </td>
     </ng-container>
 
     <ng-container matColumnDef="apellidos">
       <th mat-header-cell *matHeaderCellDef> Apellidos </th>
-      <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.apellidocliente}} </td>
     </ng-container>
 
     <ng-container matColumnDef="correo">
       <th mat-header-cell *matHeaderCellDef> Correo </th>
-      <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.emailcliente}} </td>
     </ng-container>
 
     <ng-container matColumnDef="fechaingreso">
-      <th mat-header-cell *matHeaderCellDef> Fecha de Ingreso </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechaingreso}} </td>
+      <th mat-header-cell *matHeaderCellDef> Fecha de Nacimiento </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechanacimiento}} </td>
     </ng-container>
 
     <ng-container matColumnDef="activo">
@@ -47,12 +47,11 @@
 
     <ng-container matColumnDef="tipoDocumentoColaborador">
       <th mat-header-cell *matHeaderCellDef> Documento </th>
-      <td mat-cell *matCellDef="let element"> {{element.tipoDocumentoColaborador?.nombredocumento}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.tipoDocumentoCliente?.descripciondocumento}} </td>
     </ng-container>
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-    (click)="irDetalleColaborador(row.idcolaborador)"></tr>
+    (click)="irDetalleCliente(row.idcliente)"></tr>
   </table>
-

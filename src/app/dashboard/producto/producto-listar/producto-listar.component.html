@@ -1,0 +1,54 @@
+<button mat-raised-button color="primary"
+(click)="irCrearProducto()">Nuevo Producto</button>
+
+<table mat-table [dataSource]="productos" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="idproducto">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.idproducto}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="pname">
+      <th mat-header-cell *matHeaderCellDef> Nombre</th>
+      <td mat-cell *matCellDef="let element"> {{element.pname}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="pdesc">
+      <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+      <td mat-cell *matCellDef="let element"> {{element.pdesc}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pprecio">
+      <th mat-header-cell *matHeaderCellDef> Precio </th>
+      <td mat-cell *matCellDef="let element"> {{element.pprecio}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pstock">
+      <th mat-header-cell *matHeaderCellDef> Stock </th>
+      <td mat-cell *matCellDef="let element"> {{element.pstock}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ptalla">
+      <th mat-header-cell *matHeaderCellDef> Talla </th>
+      <td mat-cell *matCellDef="let element"> {{element.ptalla}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="categoria">
+      <th mat-header-cell *matHeaderCellDef> Categoria</th>
+      <td mat-cell *matCellDef="let element"> {{element.categoria?.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="marca">
+      <th mat-header-cell *matHeaderCellDef> Marca </th>
+      <td mat-cell *matCellDef="let element"> {{element.marca?.nombre}} </td>
+    </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="irDetalleProducto(row.idproducto)"></tr>
+  </table>
+  
+  

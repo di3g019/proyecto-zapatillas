@@ -1,0 +1,26 @@
+<div class="module-header">
+    <div class="left">
+        <h3>{{formTitulo}}</h3>
+    </div>
+    <div class="right">
+        <button mat-raised-button color="primary">
+            Guardar
+        </button>        
+    </div>
+</div>
+<hr />
+<div class="form-container">
+    <form class="form" [formGroup]="despachoForm">
+
+        <mat-form-field style="width: 400px;">
+            <mat-label>Fecha Despacho:</mat-label>
+            <input matInput type="text" name="fechadespacho" 
+            formControlName="fechadespacho">
+        </mat-form-field>
+        <mat-form-field style="width: 400px;">
+            <mat-label>Estado Despacho:</mat-label>
+            <input matInput type="text" name="estadodespacho" 
+            formControlName="estadodespacho">
+        </mat-form-field>
+    </form>
+</div>

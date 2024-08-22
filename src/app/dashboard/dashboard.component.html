@@ -7,6 +7,16 @@
   <mat-menu #menu="matMenu">
     <button mat-menu-item [matMenuTriggerFor]="colaborador">Colaborador</button>
     <button mat-menu-item [matMenuTriggerFor]="venta">Venta</button>
+    <button mat-menu-item [matMenuTriggerFor]="producto">Producto</button>
+    <button mat-menu-item [matMenuTriggerFor]="despacho">Despacho</button>
+  </mat-menu>
+
+  <mat-menu #producto="matMenu">
+    <button mat-menu-item (click)="irProducto()">Mantenimiento</button>
+  </mat-menu>
+
+  <mat-menu #despacho="matMenu">
+    <button mat-menu-item (click)="irDespacho()">Mantenimiento</button>
   </mat-menu>
   
   <mat-menu #colaborador="matMenu">

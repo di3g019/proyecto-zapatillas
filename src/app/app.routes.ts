@@ -16,6 +16,10 @@ import { MetododepagoDetalleComponent } from './dashboard/metododepago/metododep
 import { RolDetalleComponent } from './dashboard/rol/rol-detalle/rol-detalle.component';
 import { TipodocumentocolaboradorDetalleComponent } from './dashboard/tipodocumentocolaborador/tipodocumentocolaborador-detalle/tipodocumentocolaborador-detalle.component';
 import { VentaDetalleComponent } from './dashboard/venta/venta-detalle/venta-detalle.component';
+import { ProductoListarComponent } from './dashboard/producto/producto-listar/producto-listar.component';
+import { ProductoDetalleComponent } from './dashboard/producto/producto-detalle/producto-detalle.component';
+import { DespachoListarComponent } from './dashboard/despacho/despacho-listar/despacho-listar.component';
+import { DespachoDetalleComponent } from './dashboard/despacho/despacho-detalle/despacho-detalle.component';
 
 export const routes: Routes = [
     {path: "login", component: LoginComponent},
@@ -34,7 +38,11 @@ export const routes: Routes = [
         {path: "tipodocumentocolaborador", component: TipodocumentocolaboradorListarComponent},
         {path: "tipodocumentocolaborador/:id",component: TipodocumentocolaboradorDetalleComponent},
         {path: "venta", component: VentaListarComponent},
-        {path: "venta/:id",component: VentaDetalleComponent}
+        {path: "venta/:id",component: VentaDetalleComponent},
+        {path: "producto", component: ProductoListarComponent},
+        {path: "producto/:id", component: ProductoDetalleComponent},
+        {path: "despacho",component:DespachoListarComponent},
+        {path: "despacho/id", component: DespachoDetalleComponent}
     ]},
     {path: "",redirectTo: "login", pathMatch: "full"},
     {path: "**", component: PageNotFoundComponent}

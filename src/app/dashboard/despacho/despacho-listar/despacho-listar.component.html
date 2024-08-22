@@ -1,0 +1,38 @@
+<button mat-raised-button color="primary"
+(click)="irCrearDespacho()">Nuevo Despacho</button>
+
+<table mat-table [dataSource]="despachos" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="iddespacho">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.iddespacho}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="fechadespacho">
+      <th mat-header-cell *matHeaderCellDef> Username</th>
+      <td mat-cell *matCellDef="let element"> {{element.fechadespacho}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="estadodespacho">
+      <th mat-header-cell *matHeaderCellDef> Contraseña </th>
+      <td mat-cell *matCellDef="let element"> {{element.estadodespacho}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cliente">
+      <th mat-header-cell *matHeaderCellDef> Cliente ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.cliente?.idcliente}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="direccionDespacho">
+      <th mat-header-cell *matHeaderCellDef> Direccion Despacho ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.direccionDespacho?.iddirecciondespacho}} </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="irDetalleDespacho(row.iddespacho)"></tr>
+  </table>
+  
+  

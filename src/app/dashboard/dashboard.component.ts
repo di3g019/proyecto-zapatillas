@@ -39,6 +39,12 @@ export class DashboardComponent {
     irRol(){
       this.router.navigate(["rol"], {relativeTo: this.route})
     }
+    irProducto(){
+      this.router.navigate(["producto"], {relativeTo: this.route})
+    }
+    irDespacho(){
+      this.router.navigate(["despacho"], {relativeTo: this.route})
+    }
 
     salir(){
       this.authService.logout()

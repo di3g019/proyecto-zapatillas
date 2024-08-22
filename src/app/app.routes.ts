@@ -42,7 +42,7 @@ export const routes: Routes = [
         {path: "producto", component: ProductoListarComponent},
         {path: "producto/:id", component: ProductoDetalleComponent},
         {path: "despacho",component:DespachoListarComponent},
-        {path: "despacho/id", component: DespachoDetalleComponent}
+        {path: "despacho/:id", component: DespachoDetalleComponent}
     ]},
     {path: "",redirectTo: "login", pathMatch: "full"},
     {path: "**", component: PageNotFoundComponent}
